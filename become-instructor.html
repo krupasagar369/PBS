@@ -202,15 +202,16 @@ make your mark.</p>
                 <h2 class="section-title text-center mb-4">Apply <span class="text-gold">Now</span></h2>
                 <form class="contact-form">
                     <div class="row g-3">
-                        <div class="col-md-6"><input type="text" class="form-control" placeholder="Full Name" required></div>
-                        <div class="col-md-6"><input type="email" class="form-control" placeholder="Email" required></div>
-                        <div class="col-md-6"><input type="tel" class="form-control" placeholder="Phone" required></div>
+                            <div class="col-md-6"><input type="text" class="form-control" id="fullName" placeholder="Full Name" required></div>
+                            <div class="col-md-6"><input type="email" class="form-control" id="email" placeholder="Email" required></div>
+                            <div class="col-md-6"><input type="tel" class="form-control" id="phone" placeholder="Phone" required></div>
                         <div class="col-md-6">
-                            <select class="form-select" required>
+                                <select class="form-select" id="expertise" required>
                                 <option value="">Expertise Area</option>
                                 <option>Cloud Computing</option>
                                 <option>Data Science</option>
                                 <option>DevOps</option>
+                                <option>Other</option>
                             </select>
                         </div>
                         <div class="col-12">
@@ -226,7 +227,40 @@ make your mark.</p>
                         </div>
                         <div class="col-12"><button type="submit" class="btn btn-primary btn-lg w-100">Submit Application</button></div>
                     </div>
-                </form>
+                    </form>
+                
+                    <script>
+                        // Add event listener to form
+                        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+                            event.preventDefault();
+                        
+                            // Get form values
+                            const name = document.getElementById('fullName').value;
+                            const email = document.getElementById('email').value;
+                            const phone = document.getElementById('phone').value;
+                            const expertise = document.getElementById('expertise').value;
+                            const experience = document.getElementById('experience').value;
+                        
+                            // Create message for WhatsApp
+                            const message = `*New Instructor Application*%0A%0A` +
+                                `Name: ${name}%0A` +
+                                `Email: ${email}%0A` +
+                                `Phone: ${phone}%0A` +
+                                `Expertise Area: ${expertise}%0A` +
+                                `Experience: ${experience}`;
+                        
+                            // Redirect to WhatsApp
+                            window.location.href = `https://wa.me/919611059935?text=${message}`;
+                        });
+                    
+                        // Character counter for experience textarea
+                        document.getElementById('experience').addEventListener('input', function() {
+                            const count = this.value.length;
+                            document.getElementById('charCount').textContent = `${count} / 500 characters`;
+                            document.getElementById('charWarning').style.display = 
+                                (count < 25) ? 'block' : 'none';
+                        });
+                    </script>
             </div>
         </div>
     </div>
