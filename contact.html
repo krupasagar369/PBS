@@ -246,7 +246,66 @@
             </div>
         </div>
     </section>
+<script>
+    // ===== CONTACT FORM SUBMISSION TO WHATSAPP =====
+const contactForm = document.getElementById('contactForm');
 
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    
+    // Validate form
+    if (!name || !email || !phone || !subject || !message) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+    
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+    
+    // Validate phone (10 digits)
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid 10-digit phone number.');
+        return;
+    }
+    
+    // Create WhatsApp message
+    const whatsappMessage = `*New Contact Request from PioneerSphere Website*%0A%0A` +
+                           `*Name:* ${encodeURIComponent(name)}%0A` +
+                           `*Email:* ${encodeURIComponent(email)}%0A` +
+                           `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                           `*Subject:* ${encodeURIComponent(subject)}%0A%0A` +
+                           `*Message:* ${encodeURIComponent(message)}`;
+    
+    // WhatsApp number - CORRECTED FORMAT
+    const whatsappNumber = '919611059935';  // This is correct: 91 (India) + 9611059935
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+    
+    // Reset form
+    contactForm.reset();
+    charCountSpan.textContent = '(0/500)';
+    
+    // Show success message
+    alert('Thank you! Redirecting to WhatsApp...');
+});
+
+</script>
     <!-- FAQs Section -->
     <section class="py-5 bg-white">
         <div class="container py-4">
