@@ -75,26 +75,7 @@ const youtubeVideos = [
         views: '2,987',
         date: '15 Oct 2025'
     },
-    {
-        id: 7,
-        embedId: 'dQw4w9WgXcQ',
-        title: 'Employee Engagement Strategies for 2025',
-        description: 'Proven strategies to boost employee engagement, retention, and organizational culture.',
-        category: 'hr-tech',
-        duration: '19:45',
-        views: '5,678',
-        date: '12 Oct 2025'
-    },
-    {
-        id: 8,
-        embedId: 'jNQXAC9IVRw',
-        title: 'Data-Driven Learning Analytics',
-        description: 'Harness the power of learning analytics to measure training effectiveness and ROI.',
-        category: 'ld-strategy',
-        duration: '21:00',
-        views: '4,321',
-        date: '10 Oct 2025'
-    }
+  
 ];
 
 // Video management variables
@@ -553,3 +534,4 @@ console.log('%cA Pioneer Business Solutions Initiative', 'font-size: 14px; color
 console.log('✓ Page loaded successfully');
 console.log('✓ Interactive features initialized');
 console.log('✓ No JavaScript errors');
+
