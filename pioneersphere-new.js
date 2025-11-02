@@ -45,7 +45,7 @@ const youtubeVideos = [
         views: '6,789',
         date: '22 Oct 2025'
     },
-  {
+    {
         id: 4,
         embedId: '3hlxam4-dos',
         title: 'Generative AI by Mayur from Pioneer Business Solutions.',
@@ -58,9 +58,8 @@ const youtubeVideos = [
     {
         id: 5,
         embedId: 'ScMzIvxBSi4',
-        title: 'Cracking the Code “What Successful Professionals Do Differently',
-        description: ' What Successful Professionals Do Differently is a 
-powerful 60-minute webinar designed to reveal the often-overlooked soft skills that truly drive career' ',
+        title: 'Leadership in the Digital Age',
+        description: 'Essential leadership skills and strategies for navigating digital transformation and remote teams.',
         category: 'leadership',
         duration: '17:20',
         views: '7,234',
@@ -78,9 +77,9 @@ powerful 60-minute webinar designed to reveal the often-overlooked soft skills t
     },
     {
         id: 7,
-        embedId: '6Q27jEhycBg',
-        title: 'Leadership Skills Webinar 12th June 2025',
-        description: 'This webinar will explore essential leadership skills needed at the senior management level It focuses on shifting from operational management to strategic, people-centric leadership. ',
+        embedId: 'dQw4w9WgXcQ',
+        title: 'Employee Engagement Strategies for 2025',
+        description: 'Proven strategies to boost employee engagement, retention, and organizational culture.',
         category: 'hr-tech',
         duration: '19:45',
         views: '5,678',
@@ -88,9 +87,9 @@ powerful 60-minute webinar designed to reveal the often-overlooked soft skills t
     },
     {
         id: 8,
-        embedId: 'tjLQoqtneXI',
-        title: 'Azure Webinar 13th June 2025',
-        description: 'This webinar is designed to introduce freshers to the world of cloud computing using Microsoft Azure.',
+        embedId: 'jNQXAC9IVRw',
+        title: 'Data-Driven Learning Analytics',
+        description: 'Harness the power of learning analytics to measure training effectiveness and ROI.',
         category: 'ld-strategy',
         duration: '21:00',
         views: '4,321',
@@ -554,4 +553,3 @@ console.log('%cA Pioneer Business Solutions Initiative', 'font-size: 14px; color
 console.log('✓ Page loaded successfully');
 console.log('✓ Interactive features initialized');
 console.log('✓ No JavaScript errors');
-
